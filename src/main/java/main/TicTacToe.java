@@ -15,10 +15,40 @@ public static int[][] ticbox;
 		//check both diagonals 
 		
 		
-		
+		for(int row=0;row<3;row++)
+		{
+			if(tic[row][0]==1 && tic[row][1]==1 && tic[row][2]==1)
+				return 1;
+			if(tic[row][0]==2 && tic[row][1]==2 && tic[row][2]==2)
+				return 2;
+			
+		}
+			for(int col=0;col<3;col++)
+			{
+				if(tic[0][col]==1 && tic[1][col]==1 && tic[2][col]==1) 
+					return 1;
+			    if(tic[0][col]==2 && tic[1][col]==2 && tic[2][col]==2) 
+						return 2;
+					
+				
+			}
 		//write your code here !!!
 		
-		
+			  if(tic[0][0]==1 && tic[1][1]==1 && tic[2][2]==1) 
+						return 1;
+
+			if(tic[0][0]==2 && tic[1][1]==2 && tic[2][2]==2) 
+								return 2;
+
+     		  if(tic[2][0]==1 && tic[1][1]==1 && tic[2][0]==1) 
+										return 1;
+     		  
+									
+     		 if(tic[2][0]==2 && tic[1][1]==2 && tic[2][0]==2) 
+					return 2;
+								
+							
+				
 		
 		return 0;
 		
@@ -38,9 +68,15 @@ public static int[][] ticbox;
 		//check if the selected box is empty ie, already not marked by other player
 		//if all checks passed return true.
 		
-		
+		if((0<=a1 && a1<3)&& (0<=a2 && a2<3))
+		{
+			if(tic[a1][a2]==0)
+			{
+				return true;
+			}
+		}
 		//Write your code here !!!
-		
+
 		
 		return false;
 	}
@@ -92,7 +128,6 @@ public static int[][] ticbox;
 					System.out.println("Please enter a valid position!!");
 				}
 			}
-			
 			
 			//if false player 2 
 		}
